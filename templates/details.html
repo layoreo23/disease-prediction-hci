@@ -10,31 +10,31 @@
           <div class="container">
             <div class="symptom-bubbles">
               <span class="symptom-bubble">itching</span>
-                    <span class="symptom-bubble">muscle_pain</span>
-                    <span class="symptom-bubble">shivering</span>    
-                    <span class="symptom-bubble">joint_pain</span>
-                    <span class="symptom-bubble">stomach_pain</span>
-                    <span class="symptom-bubble">vomiting</span>    
-                    <span class="symptom-bubble">fatigue</span>
-                    <span class="symptom-bubble">weight_loss</span>
-                    <span class="symptom-bubble">restlessness</span>
-                    <span class="symptom-bubble">lethargy</span>
-                    <span class="symptom-bubble">high_fever</span>
-                    <span class="symptom-bubble">headache</span>    
-                    <span class="symptom-bubble">dark_urine</span>
-                    <span class="symptom-bubble">nausea</span>
-                    <span class="symptom-bubble">coma</span>    
-                    <span class="symptom-bubble">constipation</span>
-                    <span class="symptom-bubble">abdominal_pain</span>
-                    <span class="symptom-bubble">diarrhoea</span>
-                    <span class="symptom-bubble">mild_fever</span>
-                    <span class="symptom-bubble">malaise</span>    
-                    <span class="symptom-bubble">phlegm</span>
-                    <span class="symptom-bubble">congestion</span>
-                    <span class="symptom-bubble">chest_pain</span>    
-                    <span class="symptom-bubble">fast_heart_rate</span>
-                    <span class="symptom-bubble">neck_pain</span>
-                    <span class="symptom-bubble">dizziness</span>
+              <span class="symptom-bubble">muscle_pain</span>
+              <span class="symptom-bubble">shivering</span>
+              <span class="symptom-bubble">joint_pain</span>
+              <span class="symptom-bubble">stomach_pain</span>
+              <span class="symptom-bubble">vomiting</span>
+              <span class="symptom-bubble">fatigue</span>
+              <span class="symptom-bubble">weight_loss</span>
+              <span class="symptom-bubble">restlessness</span>
+              <span class="symptom-bubble">lethargy</span>
+              <span class="symptom-bubble">high_fever</span>
+              <span class="symptom-bubble">headache</span>
+              <span class="symptom-bubble">dark_urine</span>
+              <span class="symptom-bubble">nausea</span>
+              <span class="symptom-bubble">coma</span>
+              <span class="symptom-bubble">constipation</span>
+              <span class="symptom-bubble">abdominal_pain</span>
+              <span class="symptom-bubble">diarrhoea</span>
+              <span class="symptom-bubble">mild_fever</span>
+              <span class="symptom-bubble">malaise</span>
+              <span class="symptom-bubble">phlegm</span>
+              <span class="symptom-bubble">congestion</span>
+              <span class="symptom-bubble">chest_pain</span>
+              <span class="symptom-bubble">fast_heart_rate</span>
+              <span class="symptom-bubble">neck_pain</span>
+              <span class="symptom-bubble">dizziness</span>
             </div>
           </div>
         </div>
@@ -54,67 +54,67 @@
 
 <div class="container mt-5">
   <form action="/predict" method="post" id="symptomForm">
-      <div class="row">
-              <div class="form-group">
-                  <label for="s1"><b>Symptom-1</b></label>
-                  <select id="s1" name="Symptom1" class="form-control">
-                    <option value=""></option>
-                      {% for symptom in symptoms %}
-                          <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
-                      {% endfor %}
-                  </select>
-              </div>
-          
-            <div class="form-group">
-                <label for="s1"><b>Symptom-2</b></label>
-                <select id="s1" name="Symptom1" class="form-control">
-                  <option value=""></option>
-                    {% for symptom in symptoms %}
-                        <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-          <div class="form-group">
-              <label for="s1"><b>Symptom-3</b></label>
-              <select id="s1" name="Symptom1" class="form-control">
-                <option value=""></option>
-                  {% for symptom in symptoms %}
-                      <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
-                  {% endfor %}
-              </select>
-          </div>
+    <div class="row">
+      <div class="form-group">
+        <label for="s1"><b>Symptom-1</b></label>
+        <select id="s1" name="Symptom1" class="form-control">
+          <option value=""></option>
+          {% for symptom in symptoms %}
+          <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
+          {% endfor %}
+        </select>
       </div>
 
-      <div class="row justify-content-center mb-3">
-          <div class="col-auto">
-              <button type="button" id="addSymptomBtn" class="btn btn-secondary">
-                  <i class="fas fa-arrow-circle-down fa-sm"></i> Add Symptom
-              </button>
-          </div>
+      <div class="form-group">
+        <label for="s1"><b>Symptom-2</b></label>
+        <select id="s1" name="Symptom1" class="form-control">
+          <option value=""></option>
+          {% for symptom in symptoms %}
+          <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
+          {% endfor %}
+        </select>
       </div>
+      <div class="form-group">
+        <label for="s1"><b>Symptom-3</b></label>
+        <select id="s1" name="Symptom1" class="form-control">
+          <option value=""></option>
+          {% for symptom in symptoms %}
+          <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
 
-      <div class="row justify-content-center">
-          <button type="submit" class="btn btn-success" style="color: rgb(237, 239, 241)">Predict</button>
+    <div class="row justify-content-center mb-3">
+      <div class="col-auto">
+        <button type="button" id="addSymptomBtn" class="btn btn-secondary">
+          <i class="fas fa-arrow-circle-down fa-sm"></i> Add Symptom
+        </button>
       </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-success" style="color: rgb(237, 239, 241)">Predict</button>
+    </div>
   </form>
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-      var maxSymptoms = 6; // Maximum number of symptoms
-      var symptomCount = 3; // Initial symptom count
+  document.addEventListener("DOMContentLoaded", function () {
+    var maxSymptoms = 6; // Maximum number of symptoms
+    var symptomCount = 3; // Initial symptom count
 
-      document.getElementById("addSymptomBtn").addEventListener("click", function() {
-          if (symptomCount >= maxSymptoms) {
-              alert("You can't add more than " + maxSymptoms + " symptoms.");
-              return;
-          }
+    document.getElementById("addSymptomBtn").addEventListener("click", function () {
+      if (symptomCount >= maxSymptoms) {
+        alert("You can't add more than " + maxSymptoms + " symptoms.");
+        return;
+      }
 
-          symptomCount++;
+      symptomCount++;
 
-          var newRow = document.createElement('div');
-          newRow.classList.add('row');
-          newRow.innerHTML = `
+      var newRow = document.createElement('div');
+      newRow.classList.add('row');
+      newRow.innerHTML = `
               <div class="col-md-4">
                   <div class="form-group">
                       <label for="s${symptomCount}"><b>Symptom-${symptomCount}</b></label>
@@ -128,9 +128,9 @@
               </div>
           `;
 
-          var addSymptomBtnRow = document.querySelector('.mb-3');
-          addSymptomBtnRow.parentNode.insertBefore(newRow, addSymptomBtnRow);
-      });
+      var addSymptomBtnRow = document.querySelector('.mb-3');
+      addSymptomBtnRow.parentNode.insertBefore(newRow, addSymptomBtnRow);
+    });
   });
 </script>
 {% include 'footer.html' %}
