@@ -66,8 +66,8 @@
       </div>
 
       <div class="form-group">
-        <label for="s1"><b>Symptom-2</b></label>
-        <select id="s1" name="Symptom1" class="form-control">
+        <label for="s2"><b>Symptom-2</b></label>
+        <select id="s2" name="Symptom2" class="form-control">
           <option value=""></option>
           {% for symptom in symptoms %}
           <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
@@ -75,8 +75,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="s1"><b>Symptom-3</b></label>
-        <select id="s1" name="Symptom1" class="form-control">
+        <label for="s3"><b>Symptom-3</b></label>
+        <select id="s3" name="Symptom3" class="form-control">
           <option value=""></option>
           {% for symptom in symptoms %}
           <option value="{{ symptom.lower().replace(' ', '_') }}">{{ symptom }}</option>
@@ -98,7 +98,7 @@
     </div>
   </form>
 </div>
-
+{% include 'footer.html' %}
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var maxSymptoms = 6; // Maximum number of symptoms
@@ -133,4 +133,6 @@
     });
   });
 </script>
-{% include 'footer.html' %}
+
+</body>
+</html>

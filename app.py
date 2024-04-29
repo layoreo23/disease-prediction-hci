@@ -47,12 +47,19 @@ def predict():
         for x in range(0,45):
             for y in inputt:
                 if(col[x]==y):
+                    if y in ["stomach_pain", "vomiting", "nausea", "abdominal_pain", "diarrhoea"]:
+                            prediction = "Gastroentritis"
+                            return render_template('results.html', word="Prediction", prediction_text="The probable diagnosis says it could be {}. For more information: <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7119329/'>Click here</a>".format(prediction))
+                    if y in ["increased_appetite", "continuous_sneezing", "restlessness", "lethargy", "high_fever", "fatigue"]:
+                            prediction = "Common Cold/Infection"
+                            return render_template('results.html', word="Prediction", prediction_text="The probable diagnosis says it could be {}. For more information: <a href='https://www.cdc.gov/antibiotic-use/colds.html'>Click here</a>".format(prediction))
                     b[x]=1
+                    
         b=np.array(b)
         b=b.reshape(1,45)
         prediction = model.predict(b)
         prediction = prediction[0]
-    return render_template('results.html', word="Prediction", prediction_text="The probable diagnosis says it could be {}".format(prediction))
+    return render_template('results.html', word="Prediction", prediction_text="The probable diagnosis says it could be symtoms of {}.Please visit a General Doctor for further advice.".format(prediction))
 
 
 if __name__ == "__main__":

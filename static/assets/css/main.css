@@ -2682,3 +2682,28 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+.btn-success {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.symptom-container .form-group {
+  margin-bottom: 10px;
+}
+.symptom-container .row .form-group {
+  margin-bottom: 10px;
+}
+
+.clicky-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+.clicky-link:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
